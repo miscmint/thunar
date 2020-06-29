@@ -1,0 +1,58 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Terminal hier öffnen</name>
+	<unique-id>1541084107597384-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Beispiel für eine eigene Aktion</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>perspective</icon>
+	<name>Ordnergröße</name>
+	<unique-id>1544121836474066-5</unique-id>
+	<command>notify-send $(du -sh %n)</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Ordner/Datei zippen</name>
+	<unique-id>1544463455332612-2</unique-id>
+	<command>zip -r %n.zip %n</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Datei unzippen</name>
+	<unique-id>1544463485520656-3</unique-id>
+	<command>unzip %n</command>
+	<description></description>
+	<patterns>*.zip</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>black_sum</icon>
+	<name>Dateien im Verzeichnis (rekursiv)</name>
+	<unique-id>1544467902755784-6</unique-id>
+	<command>notify-send $(find %n -type f | wc -l)</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>
